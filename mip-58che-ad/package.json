@@ -1,0 +1,12 @@
+{
+    "name": "mip-58che-ad",
+    "version": "1.0.0",
+    "author": {
+        "name": "yangshuqiang",
+        "email": "yang.shuqiang@58che.com",
+        "url": "http://www.58che.com/"
+    },
+    "engines": {
+        "mip": ">=1.1.0"
+    }
+}

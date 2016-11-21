@@ -18,7 +18,7 @@ define(function (require) {
             case '58che':
                 if(!/micromessenger/.test(UA)){
                     html.push('<script type="text/javascript">');
-                    html.push('write_ad("main2014_t1");');
+                    html.push('write_ad("'+token+'");');
                     html.push('tanx_s = document.createElement("script");');
                     html.push('tanx_s.type = "text/javascript";');
                     html.push('tanx_s.charset = "utf-8";');

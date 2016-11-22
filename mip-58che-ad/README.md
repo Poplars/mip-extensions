@@ -5,7 +5,7 @@ mip-58che-ad 用来支持58车(58che.com)的广告
 标题|内容
 ----|----
 类型|通用
-支持布局|container
+支持布局|responsive
 所需脚本|https://mipcache.bdstatic.com/static/v1/mip-58che-ad/mip-58che-ad.js
 
 ## 示例

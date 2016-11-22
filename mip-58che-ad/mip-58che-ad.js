@@ -12,6 +12,7 @@ define(function (require) {
         var el = this.element;
         var adtype = el.getAttribute('type');
         var token = el.getAttribute('token');
+        var adFile = el.getAttribute('src');
         var $element = $(el);
         var html = [];
         switch (adtype) {
@@ -22,32 +23,14 @@ define(function (require) {
                     html.push('tanx_s = document.createElement("script");');
                     html.push('tanx_s.type = "text/javascript";');
                     html.push('tanx_s.charset = "utf-8";');
-                    html.push('tanx_s.src = "//pics.xgo-img.com.cn/oddjs/m/index.js');
+                    html.push('tanx_s.src = "'+adFile+'"');
                     html.push('tanx_h = document.getElementsByTagName("head")[0];');
                     html.push('if(tanx_h)tanx_h.insertBefore(tanx_s,tanx_h.firstChild);');
                     html.push('</script>');
                 }
                 break;
 
-            case 'google' :
-                html.push('<ins class="adsbygoogle"');
-                html.push('     style="display:block"');
-                html.push('     data-ad-client="ca-pub-2743127670892157"');
-                html.push('     data-ad-slot="' + token + '"');
-                html.push('     data-ad-format="auto">');
-                html.push('</ins>');
-                html.push('<script>');
-                html.push('(adsbygoogle = window.adsbygoogle || []).push({});');
-                html.push('</script>');
-                html.push('<script type="text/javascript">');
-                html.push('google_s = document.createElement("script");');
-                html.push('google_s.type = "text/javascript";');
-                html.push('google_s.id = "google-adsense-' + token + '";');
-                html.push('google_s.async = true;');
-                html.push('google_s.src = "//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js";');
-                html.push('google_h = document.getElementsByTagName("head")[0];');
-                html.push('if(google_h)google_h.insertBefore(google_s,google_h.firstChild);');
-                html.push('</script>');
+            case 'baidu' :
                 break;
         }
         $element.append(html.join(''));

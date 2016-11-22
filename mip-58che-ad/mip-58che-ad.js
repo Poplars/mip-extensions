@@ -4,7 +4,7 @@
 * @author yang.shuqiang@58che.com
 * @version 1.0.0
 */
-define(function (require) {
+define("mip-58che-ad/mip-58che-ad",["require","zepto","customElement"],function (require) {
     var $ = require('zepto');
     var UA = navigator.userAgent.toLowerCase();
     var customElement = require('customElement').create();
